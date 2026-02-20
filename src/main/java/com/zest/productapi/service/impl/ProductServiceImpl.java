@@ -94,7 +94,7 @@ public class ProductServiceImpl implements ProductService {
         item.setProduct(product);
         item.setQuantity(request.getQuantity());
 
-        // Save item
+
         Item savedItem = itemRepository.save(item);
 
         // Return DTO
@@ -114,7 +114,7 @@ public class ProductServiceImpl implements ProductService {
         productRepository.delete(product);
     }
 
-    // 🔁 ENTITY → DTO
+    // ENTITY → DTO
     private ProductResponse mapToResponse(Product product) {
 
         ProductResponse response = new ProductResponse();
